@@ -1,3 +1,5 @@
+@import "../../responsive.scss";
+
 nav {
   height: 100px;
   display: flex;
@@ -6,6 +8,10 @@ nav {
 
   a {
     transition: all 0.4s ease;
+
+    @include sm{
+      display: none;
+    }
 
     &:hover {
       scale: 1.05; //5% larger
@@ -28,6 +34,18 @@ nav {
       img {
         width: 28px;
       }
+
+      span {
+        // remove span on medium
+        @include md {
+          display: none;
+        }
+
+        // return span
+        @include sm {
+          display: initial;
+        }
+      }
     }
   }
 
@@ -39,13 +57,60 @@ nav {
     background-color: #fcf5f3;
     height: 100%;
 
+    @include md {
+      background-color: transparent;
+    }
+
     a {
       padding: 12px 24px;
-      margin: 24px;
+      margin: 20px;
     }
     
     .register {
       background-color: #fece51;
     }
+
+    .menuIcon {
+      display: none;
+      z-index: 999;
+
+      img {
+        width: 36px;
+        height: 36px;
+        cursor: pointer;
+      }
+
+      // show icon on sm
+      @include sm {
+        display: inline;
+      }
+    }
+
+    .menu {
+      position: absolute;
+      top: 0;
+      right: -50%;
+      background-color: black;
+      color: white;
+      height: 100vh;
+      width: 50%;
+      transition: all 1s ease;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      font-size: 24px;
+
+      &.active {
+      right: 0;
+      }
+
+      @include sm {
+        a {
+          display: initial;
+        }
+      }
+    }
   }
 }
+
