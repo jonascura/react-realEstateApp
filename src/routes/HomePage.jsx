@@ -19,6 +19,7 @@ const HomePage = () => {
           </p>
           
           <SearchBar />
+          
           <div className="boxes">
             <div className="box">
               <h1>16+</h1>
