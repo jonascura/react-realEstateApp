@@ -1,6 +1,7 @@
 import React from 'react';
 import "./homePage.scss";
-import SearchBar from '../componants/navbar/SearchBar';
+import SearchBar from './src/componants/SearchBar/SearchBar';
+
 
 const HomePage = () => {
   return (
@@ -19,7 +20,7 @@ const HomePage = () => {
           </p>
           
           <SearchBar />
-          
+
           <div className="boxes">
             <div className="box">
               <h1>16+</h1>

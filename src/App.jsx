@@ -1,5 +1,5 @@
 import "./layout.scss";
-import NavBar from "./componants/navbar/NavBar";
+import NavBar from "./componants/NavBar/NavBar";
 import HomePage from "./routes/HomePage";
 
 function App() {
