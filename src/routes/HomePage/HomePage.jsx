@@ -1,6 +1,6 @@
 import React from 'react';
 import "./homePage.scss";
-import SearchBar from '../../componants/SearchBar/SearchBar.jsx';
+import SearchBar from '../../components/SearchBar/SearchBar.jsx';
 
 
 
