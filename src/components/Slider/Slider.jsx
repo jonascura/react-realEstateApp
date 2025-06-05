@@ -8,23 +8,19 @@ const Slider = ({ images }) => {
 
   const changeImage = ( direction ) => {
     
-    const maxIndex = images.length-1;
-    
-    // if imageIndex < 0 then arrow button wraps around to maxIndex
-    if (direction == "-") {
+    if (direction === "-") {
+      // if imageIndex < 0 then arrow button wraps around to maxIndex
       if (imageIdex > 0) {
         setImageIndex(imageIdex-1);
       } else {
-        setImageIndex(maxIndex);
-      }
-    }
-
-    // if imageIndex > images.length then arrow button resets from 0th index
-    if (direction == "+") {
-      if (imageIdex < maxIndex) {
-        setImageIndex(imageIdex+1);
-      } else {
+        setImageIndex(images.length-1);
+      }  
+    } else if (direction === "+") {
+      if (imageIdex === images.length-1) {
+        // if imageIndex > images.length then arrow button resets to 0th index
         setImageIndex(0);
+      } else {
+        setImageIndex(imageIdex+1);
       }
     }
   }
