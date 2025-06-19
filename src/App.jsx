@@ -6,6 +6,7 @@ import HomePage from "./routes/HomePage/HomePage";
 import ListPage from "./routes/ListPage/ListPage";
 import Layout from "./routes/Layout/Layout";
 import SinglePage from "./routes/SinglePage/SinglePage";
+import ProfilePage from "./routes/ProfilePage/ProfilePage";
 
 function App() {
 
@@ -25,6 +26,10 @@ function App() {
         {
           path: "/:id",
           element: <SinglePage />
+        },
+        {
+          path: "/profile",
+          element: <ProfilePage />
         },
       ]
     },
